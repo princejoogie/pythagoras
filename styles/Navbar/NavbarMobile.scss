@@ -1,0 +1,124 @@
+.navbarMobile {
+  z-index: 500;
+  position: sticky;
+  top: 0;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.07);
+  background-color: white;
+  z-index: 500;
+  padding: 0 20px;
+
+  &__items {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: height 0.2s ease-in-out;
+  }
+
+  &__logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      user-select: none;
+      object-fit: cover;
+
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__cart {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__line {
+    width: 30px;
+    height: 3px;
+    background: #212529;
+    margin: 5px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__hamburger {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__hamburger.open {
+    .navbarMobile__line:nth-child(1) {
+      transform: rotate(45deg) translateY(5px);
+    }
+    .navbarMobile__line:nth-child(2) {
+      display: none;
+    }
+    .navbarMobile__line:nth-child(3) {
+      transform: rotate(-45deg) translateY(-5px) translateX(1px);
+    }
+  }
+}
+
+.cart-container {
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  div {
+    margin-left: 5px;
+    background: #f5365c;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    color: white;
+  }
+}
+
+.scrollUp {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+#fabIcon {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .scrollUp {
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scrollUp {
+    bottom: 10px;
+    right: 10px;
+  }
+}

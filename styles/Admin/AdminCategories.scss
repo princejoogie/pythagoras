@@ -1,0 +1,68 @@
+.adminCategories {
+  display: flex;
+  flex-direction: column;
+
+  &__fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__listTile {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 100%;
+    transition: transform 0.3s;
+
+    p {
+      align-self: center;
+      margin-right: 20px;
+    }
+
+    &__card {
+      display: flex;
+      background: #ffffff;
+      border: 1px solid #d6dae2;
+      box-sizing: border-box;
+      border-radius: 4px;
+      padding: 15px 20px;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      transition: background 0.3s;
+
+      div {
+        display: flex;
+      }
+
+      h3 {
+        color: #212529;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        flex: 1;
+      }
+
+      &__close {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

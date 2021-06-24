@@ -1,0 +1,272 @@
+.myOrders {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__modalBG {
+    z-index: 2000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__modal {
+      width: 50%;
+      height: 80%;
+      background: #ffffff;
+      box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+        0px 0px 5px rgba(0, 0, 0, 0.07);
+      border-radius: 4px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 22px;
+        color: #32325d;
+      }
+
+      h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 22px;
+        color: #32325d;
+        margin-bottom: 10px;
+      }
+
+      &__subitem {
+        border-radius: 4px;
+        background: #e9ecef;
+        padding: 10px;
+        display: flex;
+        margin-bottom: 10px;
+
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          margin-right: 10px;
+        }
+
+        div {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+
+      &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__close {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__details {
+        flex: 2;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        &__item {
+          display: flex;
+          margin-bottom: 10px;
+
+          strong {
+            flex: 1;
+            margin-right: 10px;
+
+            p {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 21px;
+              color: #212529;
+            }
+          }
+
+          p {
+            flex: 2;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            color: #212529;
+          }
+
+          div {
+            flex: 1;
+          }
+        }
+      }
+
+      &__subtotal {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+
+          strong {
+            p {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 22px;
+              color: #32325d;
+            }
+          }
+
+          p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            color: #32325d;
+          }
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-style: normal;
+          font-size: 14px;
+          line-height: 19px;
+        }
+
+        &__close {
+          padding: 10px 20px;
+          background: #f4f5f7;
+          box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+            0px 0px 5px rgba(0, 0, 0, 0.07);
+          border-radius: 4px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &__reorder {
+          padding: 10px 20px;
+          background: #5e72e4;
+          box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+            0px 0px 5px rgba(0, 0, 0, 0.07);
+          border-radius: 4px;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  &__rowTitles {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    flex: 1;
+    margin: 5px;
+
+    h4 {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      color: #525f7f;
+    }
+  }
+
+  &__row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 21px;
+      color: #212529;
+    }
+
+    strong {
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__card {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 20px;
+    background: #ffffff;
+    border: 1px solid #d6dae2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px 20px;
+    flex: 1;
+    margin: 5px;
+
+    &__button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    &:hover {
+      background: whitesmoke;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .myOrders__modalBG__modal {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .myOrders__modalBG__modal {
+    width: 90%;
+  }
+}

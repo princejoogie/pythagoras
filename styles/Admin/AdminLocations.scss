@@ -1,0 +1,39 @@
+.adminLocations {
+  display: flex;
+  flex-direction: column;
+
+  &__fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &__card {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #d6dae2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 15px 20px;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+
+    h3 {
+      color: #212529;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 22px;
+      flex: 1;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #525f7f;
+    }
+  }
+}

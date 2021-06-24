@@ -1,0 +1,46 @@
+.sidebarMobile {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  background: white;
+  padding: 0 10px;
+  z-index: 300;
+  overflow-y: auto;
+  width: 250px;
+  box-shadow: 1px 0px 5px rgba(50, 50, 93, 0.1);
+  margin-left: -250px;
+  transition: margin 0.3s ease-in-out;
+
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      max-width: 50%;
+    }
+
+  }
+}
+
+.sidebarMobile.show {
+  margin-left: 0px;
+}

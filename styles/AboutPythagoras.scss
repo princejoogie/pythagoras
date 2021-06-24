@@ -1,0 +1,82 @@
+.aboutPyth {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    background: #c4c4c4;
+    border-radius: 4px;
+  }
+
+  p {
+    margin-top: 20px;
+    line-height: 24px;
+    font-size: 16x;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  &__tile {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:hover {
+      cursor: pointer;
+      background: whitesmoke;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 20px;
+    }
+  }
+
+  &__card {
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      cursor: pointer;
+      background: whitesmoke;
+    }
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__description {
+      padding: 20px;
+    }
+  }
+
+  &__newsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}

@@ -1,0 +1,20 @@
+.toast {
+  z-index: 9999;
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__message {
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    padding: 10px 25px;
+    color: white;
+    background: #5e72e4;
+  }
+}

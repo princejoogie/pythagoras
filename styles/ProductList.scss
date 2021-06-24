@@ -1,0 +1,19 @@
+.productList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .productList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productList {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+  }
+}

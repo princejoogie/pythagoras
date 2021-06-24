@@ -1,0 +1,30 @@
+{
+  "id": "<string>",
+  "type": "<string>",
+  "date": "<string>",
+  "status": "<string>",
+  "branch": "<string>",
+  "items": [
+    {
+      "id": "<string>",
+      "name": "<string>",
+      "size": "<string>",
+      "quantity": "<number>",
+      "price": "<number>",
+      "totalPrice": "<number>",
+      "addOns": [
+        {
+          "name": "<string>",
+          "price": "<number>"
+        }
+      ]
+    }
+  ],
+  "paymentMethod": "<string>",
+  "customer": {
+    "name": "<string>",
+    "deliveryAddress": "<string>",
+    "contactNumber": "<string>",
+    "email": "<string>"
+  }
+}

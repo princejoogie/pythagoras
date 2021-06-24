@@ -1,0 +1,132 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-size: 13px;
+    line-height: 18px;
+    color: #8898aa;
+  }
+
+  --formWidth: 400px;
+
+  &__other {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    min-width: var(--formWidth);
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11),
+      0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 10px 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background: whitesmoke;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 6px rgba(50, 50, 93, 0.11),
+        0px 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    h5 {
+      margin-left: 10px;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  &__input {
+    min-width: var(--formWidth);
+    background: white;
+  }
+
+  &__w300 {
+      width: var(--formWidth);
+  }
+
+  &__remember {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+    align-items: center;
+    min-width: var(--formWidth);
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      margin-right: 10px;
+      text-align: end;
+      color: #5e72e4;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__button {
+    background: #5e72e4;
+    box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11),
+      0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 10px 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover {
+      background: #4958ad;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: #5e72e4;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 14px;
+      color: white;
+      line-height: 19px;
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+  }
+
+  &__name {
+      width: var(--formWidth);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register {
+    --formWidth: 95%;
+  }
+}

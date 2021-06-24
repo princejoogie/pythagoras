@@ -1,0 +1,109 @@
+.cartitem {
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+
+  img {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+  }
+
+  &__left {
+    display: flex;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    p {
+      text-align: right;
+      color: #525f7f;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    h3 {
+      text-align: right;
+      font-weight: normal;
+      color: #212529;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__name {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #525f7f;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      color: #525f7f;
+    }
+  }
+
+  &__remove {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #f5365c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: height 0.1s, width 0.1s;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+
+    p {
+      font-size: 12px;
+      text-align: center;
+      color: white;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11),
+        0px 1px 3px rgba(0, 0, 0, 0.08);
+      cursor: pointer;
+      width: 26px;
+      height: 26px;
+    }
+
+    &:active {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.removed {
+    opacity: 0;
+  }
+}

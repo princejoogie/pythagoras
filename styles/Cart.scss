@@ -1,0 +1,38 @@
+.cart {
+  h1 {
+    font-size: 35px;
+    line-height: 48px;
+    font-weight: 600;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 20px;
+
+    h2 {
+      color: #212529;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      color: #5e72e4;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cart__grid {
+    grid-template-columns: 1fr;
+  }
+}

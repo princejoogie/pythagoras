@@ -1,0 +1,111 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #525f7f;
+  }
+
+  h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #5e72e4;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+    color: #212529;
+  }
+
+  input {
+    border: 1px solid #cad1d7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 40px;
+    padding: 10px;
+  }
+
+  &__socMed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    strong {
+      flex: 1;
+
+      p {
+        font-weight: bold;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__account {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  &__row-2 {
+    display: flex;
+
+    div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    padding: 10px 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  &__card {
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

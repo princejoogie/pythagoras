@@ -1,0 +1,227 @@
+.navbar {
+  z-index: 500;
+  position: sticky;
+  top: 0;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.07);
+  background-color: white;
+  z-index: 500;
+  padding: 0 20px;
+
+  &__items {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: height 0.2s ease-in-out;
+  }
+
+  #logo-name {
+    font-size: 22px;
+    transition: font-size 0.3s;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(1);
+    }
+  }
+
+  &__logo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+
+    div {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    h3 {
+      line-height: 100%;
+      text-align: center;
+      margin-left: 16px;
+    }
+
+    span {
+      line-height: 100%;
+      margin-left: 5px;
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  &__searchbar {
+    height: 50px;
+    display: flex;
+    flex: 2;
+    width: 100%;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    input {
+      margin-left: 5px;
+      border: none;
+      font-size: 16px;
+      line-height: 21px;
+      width: 100%;
+
+      &::placeholder {
+        color: #adb5bd;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 2;
+
+    img {
+      margin-left: 16px;
+    }
+  }
+
+  &__btn {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0 10px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__location {
+    max-width: 250px;
+    overflow: hidden;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: whitesmoke;
+    }
+
+    &:active {
+      background: white;
+    }
+
+    h4 {
+      margin-right: 5px;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+  }
+
+  &__cart {
+    height: 50px;
+    align-items: center;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: whitesmoke;
+    }
+
+    &:active {
+      background: white;
+    }
+
+    h4 {
+      margin-left: 15px;
+    }
+  }
+
+  &__cartCount {
+    margin-left: 15px;
+    display: flex;
+    background: #f5365c;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    color: white;
+  }
+}
+
+.btn__active {
+  color: #5e72e4;
+  border-bottom: 1px solid #5e72e4;
+}
+
+.navbar.onScroll {
+  box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1), 0px 0px 5px rgba(0, 0, 0, 0.07);
+  background-color: white;
+  z-index: 500;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    &__logo {
+      div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h3 {
+          text-align: left;
+        }
+
+        span {
+          text-align: left;
+          margin-left: 16px;
+        }
+      }
+    }
+
+    &__location {
+      max-width: 150px;
+    }
+  }
+}

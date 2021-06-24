@@ -1,0 +1,10 @@
+.adminProducts {
+    display: flex;
+    flex-direction: column;
+
+    &__fab {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+}

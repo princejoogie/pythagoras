@@ -1,0 +1,155 @@
+.payment {
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+    h2 {
+      color: #212529;
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    color: #5e72e4;
+
+    p {
+      margin-left: 10px;
+      color: #5e72e4;
+    }
+  }
+
+  &__card {
+    background: #ffffff;
+    box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+      0px 0px 5px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    input {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #cad1d7;
+      width: 100%;
+    }
+
+    h3 {
+      color: #525f7f;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    p {
+      color: #525f7f;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__method {
+      display: flex;
+    }
+
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__cc {
+    padding-top: 20px;
+    padding-left: 34px;
+    padding-right: 34px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+
+    &__button {
+      margin-top: 10px;
+      box-shadow: 0px 0px 5px rgba(50, 50, 93, 0.1),
+        0px 0px 5px rgba(0, 0, 0, 0.07);
+      border-radius: 4px;
+      padding: 5px 15px;
+      background: #5e72e4;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 12px;
+        color: white;
+      }
+    }
+
+    &__cards {
+      display: flex;
+
+      img {
+        object-fit: contain;
+        height: 24px;
+        margin-right: 5px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+      }
+
+      &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+        width: 100%;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+        }
+      }
+
+      &__row-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+#back-btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment__cc__cards__row {
+    grid-template-columns: 1fr;
+  }
+
+  .payment__cc__cards__row-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .payment__grid {
+    grid-template-columns: 1fr;
+  }
+}

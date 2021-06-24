@@ -1,0 +1,34 @@
+.sidebarDesktop {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  background: white;
+  padding: 0 10px;
+  z-index: 300;
+  overflow-y: auto;
+  width: 250px;
+  box-shadow: 1px 0px 5px rgba(50, 50, 93, 0.1);
+
+  &__category {
+    border-radius: 10px;
+    padding: 0 10px;
+    transition: padding 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background: whitesmoke;
+      padding-left: 15px;
+    }
+
+    &:active {
+      background: white;
+    }
+
+    h5 {
+      color: #212529;
+      font-size: 14px;
+      line-height: 19px;
+      padding: 15px 0;
+    }
+  }
+}
